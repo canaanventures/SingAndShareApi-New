@@ -1,5 +1,5 @@
 const express = require('express'),
-port = 3000,
+port = process.env.PORT || 3000,
 mysql = require('mysql2'),
 app = express(),
 bodyParser = require('body-parser');
@@ -42,10 +42,9 @@ var upload = multer({storage: storage});
 
 const db = mysql.createPool({
 	host: '65.175.118.74',
-	port: '2082',
-	user: 'admin_sing_and_share',
-	password: 'Sing&Share@123',
-	database: 'admin_sing_and_share'
+	user: 'admin_sas',
+	password: 'S@SAdmin9',
+	database: 'admin_singandshare'
 });
 
 app.post('/login',function(req,res){
