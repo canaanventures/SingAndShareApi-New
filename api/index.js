@@ -1,3 +1,4 @@
+
 const express = require('express'),
 port = process.env.PORT || 3000,
 mysql = require('mysql2'),
@@ -331,5 +332,7 @@ app.get('/getEventStatus',function(req,res){
 		}
 	});
 })
+
+module.exports = app;
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
